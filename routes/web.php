@@ -25,5 +25,10 @@ Route::get('/shop', function (){
 Route::get('/contact', function (){
     return view('contact');
 });
-
+Route::get('/shop_single', function (){
+    return view('shop_single');
+});
+Route::get('/blog', function (){
+    return view('blog');
+});
 

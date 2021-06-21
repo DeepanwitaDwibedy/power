@@ -1,30 +1,8 @@
-<!DOCTYPE html>
-<html>
+@extends('frontend.master')
 
-<head>
-<meta charset="utf-8">
-<title>Meekazenics </title>
-<!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
+@section('content')
 
-
-<!--Favicon-->
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-</head>
-
-<body>
 <div class="page-wrapper">
- 	
-    <!-- Preloader -->
-    <div class="preloader"></div>
  	
     <!-- Main Header-->
     <header class="main-header style-two">
@@ -35,7 +13,7 @@
                 <div class="clearfix">
                     
                     <div class="pull-left" >
-                        <div class="logo" style="padding: 7px 10px 20px 10px;"><a href="index.blade.php"><img src="images/logo.jpg" alt="" title=""></a></div>
+                        <div class="logo" style="padding: 7px 10px 20px 10px;"><a href="{{ url('/') }}"><img src="{{ asset('frontend/assets/images/logo.png') }}" alt="" title=""></a></div>
                     </div>
                     
                     
@@ -54,7 +32,7 @@
                             <div class="icon-box"><span class="machinery-icon-contact" style="font-size: 25px"></span></div>
                             <ul>
                                 <li style="font-size: 12px;">+(91)-8128729003</li>
-                                <li><strong style="font-size: 12px;">meekazenicsmac@gmail.com</strong></li>
+                                <li><strong style="font-size: 12px;">shreeganesh@gmail.com</strong></li>
                             </ul>
                         </div>
                         
@@ -98,13 +76,15 @@
                         
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
-                                <li><a href="index.blade.php">Home</a>
+                                <li><a href="{{ url('/') }}">Home</a>
                                 </li>
-                                <li><a href="about.blade.php">About Us</a>
+                                <li><a href="{{ url('about') }}">About Us</a>
                                 </li>
-                                <li><a href="shop.blade.php">Shop</a>
+                                <li><a href="{{ url('shop') }}">Shop</a>
                                 </li>
-                                <li><a href="contact.blade.php">Contact Us</a>
+                                <li><a href="{{ url('blog') }}">Blog</a>
+                                </li>
+                                <li><a href="{{ url('contact') }}">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
@@ -120,11 +100,11 @@
     <!--End Main Header -->
     
     <!--Page Title-->
-    <section class="page-title" style="background-image:url(images/background/2.jpg)">
+    <section class="page-title" style="background-image:url(frontend/assets/images/background/2.jpg)">
         <div class="auto-container">
             <h1>Product Single</h1>
             <ul class="page-breadcrumb">
-                <li><a href="index.blade.php">Home</a></li>
+                <li><a href="{{ url('/') }}">Home</a></li>
                 <li>Shop</li>
                 <li>Product Single</li>
             </ul>
@@ -138,7 +118,7 @@
             <div class="row clearfix">
                 
                 <!--Content Side-->
-                <div class="content-side pull-right col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                <div class="content-side pull-right col-lg-9 col-md-12 col-sm-12 col-xs-12">
                     <!--Shop Single-->
                     <div class="shop-single">
                         <div class="product-details">
@@ -147,11 +127,11 @@
                             <div class="basic-details">
                                 <div class="row clearfix">
                                     <div class="image-column col-md-6 col-sm-6 col-xs-12">
-                                        <figure class="image-box"><a href="images/resource/products/10.jpg" class="lightbox-image" title="Image Caption Here"><img src="images/resource/products/10.jpg" alt=""></a></figure>
+                                        <figure class="image-box"><a href="{{ asset('frontend/assets/images/resource/products/news-12.jpg') }}" class="lightbox-image" title="Image Caption Here"><img src="{{ asset('frontend/assets/images/resource/products/news-12.jpg') }}" alt=""></a></figure>
                                     </div>
                                     <div class="info-column col-md-6 col-sm-6 col-xs-12">
                                         <div class="details-header">
-                                            <h4>Win Your Friends</h4>
+                                            <h4>Hydraulic Single Die Panel Operated Machine</h4>
                                             <div class="rating">
                                                 <span class="fa fa-star"></span>
                                                 <span class="fa fa-star"></span>
@@ -168,7 +148,7 @@
                                         <div class="location">Check Delivery Option at Your Location:</div>
                                         <!-- Pincode Form -->
                                         <div class="pincode-form">
-                                            <form method="post" action="http://st.ourhtmldemo.com/new/Machinery/contact.html">
+                                            <form method="post" action="#">
                                                 <div class="form-group">
                                                     <input type="text" name="text" value="" placeholder="Pincode" required>
                                                     <button type="submit">Check</button>
@@ -215,7 +195,7 @@
                                                 <!--Comment Box-->
                                                 <div class="comment-box">
                                                     <div class="comment">
-                                                        <div class="author-thumb"><img src="images/resource/author-1.jpg" alt=""></div>
+                                                        <div class="author-thumb"><img src="{{ asset('frontend/assets/images/resource/author-1.jpg') }}" alt=""></div>
                                                         <div class="comment-inner">
                                                             <div class="comment-info clearfix">Steven Rich – Sep 17, 2016:</div>
                                                             <div class="rating">
@@ -232,7 +212,7 @@
                                                 <!--Comment Box-->
                                                 <div class="comment-box">
                                                     <div class="comment">
-                                                        <div class="author-thumb"><img src="images/resource/author-2.jpg" alt=""></div>
+                                                        <div class="author-thumb"><img src="{{ asset('frontend/assets/images/resource/author-2.jpg')}}" alt=""></div>
                                                         <div class="comment-inner">
                                                             <div class="comment-info clearfix">William Cobus – Aug 21, 2016:</div>
                                                             <div class="rating">
@@ -289,7 +269,7 @@
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <form method="post" action="http://st.ourhtmldemo.com/new/Machinery/contact.html">
+                                                <form method="post" action="#">
                                                     <div class="row clearfix">
                                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                                                             <label>First Name *</label>
@@ -320,255 +300,11 @@
                                 </div>
                             </div>
                             <!--End Product Info Tabs-->
-
-                            <!--Related Products-->
-                            <div class="related-products">
-                                <h2>Related Products</h2>
-                                <div class="row clearfix">
-                                     <!--Shop Item-->
-                                    <div class="shop-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <div class="image">
-                                                    <img src="images/resource/products/1.jpg" alt="" />
-                                                    <div class="overlay-box">
-                                                        <ul class="cart-option">
-                                                            <li><span class="tool-tip">Add to cart</span><a href="#"><span class="flaticon-supermarket"></span></a></li>
-                                                            <li><span class="tool-tip">Add to Whishlist</span><a href="#"><span class="flaticon-heart"></span></a></li>
-                                                            <li><span class="tool-tip">View</span><a href="#"><span class="fa fa-eye"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <div class="price-box">
-                                                    <h3><a href="">The Innovators</a></h3>
-                                                    <div class="price">$34.99</div>
-                                                </div>
-                                                <!--Rating-->
-                                                <div class="rating">
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star-half-empty"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!--Shop Item-->
-                                    <div class="shop-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <div class="image">
-                                                    <img src="images/resource/products/2.jpg" alt="" />
-                                                    <div class="overlay-box">
-                                                        <ul class="cart-option">
-                                                            <li><span class="tool-tip">Add to cart</span><a href="#"><span class="flaticon-supermarket"></span></a></li>
-                                                            <li><span class="tool-tip">Add to Whishlist</span><a href="#"><span class="flaticon-heart"></span></a></li>
-                                                            <li><span class="tool-tip">View</span><a href="#"><span class="fa fa-eye"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <div class="price-box">
-                                                    <h3><a href="#">Win Your Friends</a></h3>
-                                                    <div class="price">$29.00</div>
-                                                </div>
-                                                <!--Rating-->
-                                                <div class="rating">
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star-half-empty"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!--Shop Item-->
-                                    <div class="shop-item col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <div class="image">
-                                                    <img src="images/resource/products/3.jpg" alt="" />
-                                                    <div class="overlay-box">
-                                                        <ul class="cart-option">
-                                                            <li><span class="tool-tip">Add to cart</span><a href="#"><span class="flaticon-supermarket"></span></a></li>
-                                                            <li><span class="tool-tip">Add to Whishlist</span><a href="#"><span class="flaticon-heart"></span></a></li>
-                                                            <li><span class="tool-tip">View</span><a href="#"><span class="fa fa-eye"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <div class="price-box">
-                                                    <h3><a href="#">Business Adventures</a></h3>
-                                                    <div class="price">$24.99</div>
-                                                </div>
-                                                <!--Rating-->
-                                                <div class="rating">
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star-half-empty"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!--Sidebar Side-->
-                <div class="sidebar-side col-lg-3 col-md-4 col-sm-12 col-xs-12">
-                    <aside class="sidebar shop-sidebar">
-                        <!-- Search -->
-                        <div class="sidebar-widget search-box style-two">
-                            <form method="post" action="http://st.ourhtmldemo.com/new/Machinery/contact.html">
-                                <div class="form-group">
-                                    <input type="search" name="search-field" value="" placeholder="Search..." required>
-                                    <button type="submit"><span class="icon fa fa-search"></span></button>
-                                </div>
-                            </form>
-                        </div>
-                        
-                        <!--Blog Category Widget-->
-                        <div class="sidebar-widget sidebar-blog-category">
-                            <div class="sidebar-title">
-                                <h2>Categories</h2>
-                            </div>
-                            <ul class="blog-cat">
-                                <li><a href="#">Business Growth </a></li>
-                                <li class="active"><a href="#">Consulting </a></li>
-                                <li><a href="#">Management</a></li>
-                                <li><a href="#">Customer Insights</a></li>
-                                <li><a href="#">Organization</a></li>
-                            </ul>
-                        </div>
-                        
-                        
-                        
-                        <!-- Top Related Posts -->
-                        <div class="sidebar-widget related-posts">
-                            <div class="sidebar-title">
-                                <h2>Popular Products</h2>
-                            </div>
-                            <div class="post">
-                                <figure class="post-thumb"><a href="#"><img src="images/resource/products/prod-thumb-1.jpg" alt=""></a></figure>
-                                <h4><a href="#">The Innovators</a></h4>
-                                <div class="price">$34.99</div>
-                                <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-half-o light"></span></div>
-                            </div>
-                            <div class="post">
-                                <figure class="post-thumb"><a href="#"><img src="images/resource/products/prod-thumb-2.jpg" alt=""></a></figure>
-                                <h4><a href="#">Good to Great</a></h4>
-                                <div class="price">$29.00</div>
-                                <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                            </div>
-                            <div class="post">
-                                <figure class="post-thumb"><a href="#"><img src="images/resource/products/prod-thumb-3.jpg" alt=""></a></figure>
-                                <h4><a href="#">Built to Last</a></h4>
-                                <div class="price">$24.99</div>
-                                <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o light"></span></div>
-                            </div>
-                        </div>
-                    </aside>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Main Footer -->
-    <footer class="main-footer padding-top">
-        <div class="auto-container">
-            <!--Widgets Section-->
-            <div class="widgets-section">
-                <div class="row clearfix">
-                    <!--Footer Column-->
-                    <div class="footer-column col-md-6 col-sm-6 col-xs-12">
-                        <div class="logo"><a href="index.blade.php"><img src="images/logo.jpg" alt=""></a></div>
-                        <div class="footer-widget subscribe-widget">
-                            <div class="widget-content">
-                                <div class="text">
-                                    <h4>Let’s join & create something together</h4>
-                                    <p>Must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give you completed.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="footer-column col-md-6 col-sm-6 col-xs-12">
-                        <div class="footer-widget contact-widget">
-                            <div class="single-contact-widget">
-                                <div class="icon-box">
-                                    <i class="machinery-icon-telephone"></i>
-                                </div><!-- /.icon-box -->
-                                <div class="text-box">
-                                    <h3>For Business Dealing:</h3>
-                                    <span>+(91)-8128729003</span>
-                                    <p>Available 9:00 - 7:00 all days.</p>
-                                </div><!-- /.text-box -->
-                            </div><!-- /.single-contact-widget -->
-                            <div class="single-contact-widget">
-                                <div class="icon-box">
-                                    <i class="machinery-icon-map"></i>
-                                </div><!-- /.icon-box -->
-                                <div class="text-box">
-                                    <p>Plot no- 2027,<br>Ground Floor,Samantarapur,Bhubaneswar,<br>Khordha-751002,Odisha,India</p>
-                                </div><!-- /.text-box -->
-                            </div><!-- /.single-contact-widget -->
-                            <div class="single-contact-widget">
-                                <div class="icon-box">
-                                    <i class="machinery-icon-send"></i>
-                                </div><!-- /.icon-box -->
-                                <div class="text-box">
-                                    <h3>Mail Us at</h3>
-                                    <p>meekazenicsmac@gmail.com</p>
-                                </div><!-- /.text-box -->
-                            </div><!-- /.single-contact-widget -->
-                        </div>
-                    </div>      
-                </div>
-            </div>
-        </div>
-        
-        <!--Footer Bottom-->
-         <div class="footer-bottom">
-            <div class="auto-container clearfix">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="copyright-text">&copy; 2020 All Rights Reserved by <a href="index.blade.php">The Wega</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End Main Footer -->
-
-
-</div>    
-<!--End pagewrapper-->
-
-<!--Scroll to top-->
-<div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-arrow-up"></span></div>
-<script src="js/jquery.js"></script> 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/jquery.bootstrap-touchspin.js"></script>
-<script src="js/owl.js"></script> 
-<script src="js/appear.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/script.js"></script>
-</body>
-
-<!-- Mirrored from st.ourhtmldemo.com/new/Machinery/shop-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Nov 2020 14:00:30 GMT -->
-</html>
+@endsection

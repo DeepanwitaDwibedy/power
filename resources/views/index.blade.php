@@ -85,6 +85,8 @@
                                 </li>
                                 <li class="@yield('shop')"><a href="{{ url('shop') }}">Shop</a>
                                 </li>
+                                <li><a href="{{ url('blog') }}">Blog</a>
+                                </li>
                                 <li class="@yield('contact')"><a href="{{ url('contact') }}">Contact Us</a>
                                 </li>
                             </ul>
