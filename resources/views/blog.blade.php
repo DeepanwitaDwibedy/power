@@ -3,9 +3,6 @@
 @section('content')
 <div class="page-wrapper">
  	
-    <!-- Preloader -->
-    <!-- <div class="preloader"></div> -->
- 	
        <!-- Main Header-->
      <header class="main-header style-two">
         
@@ -115,129 +112,35 @@
     <!-- News Section -->
     <section class="news-section">
         <div class="auto-container">
+            @foreach($blog as $blog)
             <div class="row clearfix">
                 <!-- News Block -->
                 <div class="news-block col-md-4 col-sm-6 col-xs-12">
                     <div class="inner-box">
-                            <img src="{{ asset('frontend/assets/images/resource/products/news-12.jpg') }}" alt="">
+                            <img src="{{ asset('/images/upload_image/'.$blog -> image) }}" alt="">
                         <div class="lower-content clearfix">
                             <div class="info">
                                 <ul>
-                                    <li><a href="#">Machine</a>, </li>
-                                    <li><a href="#">June 06, 2019</a></li>
+                                    <li><a href="#">{{ strtoupper(strtolower($blog ->tag))  }}</a>, </li>
+                                    <!-- <li><a href="#">June 06, 2019</a></li> -->
                                 </ul>  
                             </div>
-                            <h3>Hydraulic Single Die Panel Operated Machine</h3>
+                            <h3>{{ strtoupper(strtolower($blog->title)) }}</h3>
                             
-                            <div class="text">Rationally encounter consequences seds ut that are extremely painful and when to do what we like beat circumtances and owing...</div>
+                            <div class="text">{{ strtoupper(strtolower($blog->short_description)) }}</div>
                             <div class="more-box clearfix">
                                 <div class="author-box">
-                                    <img src="{{asset('frontend/assets/images/testimonials/1.png')}}" alt="Awesome Image"/>
-                                    <span class="author-name">Thomas Mersinger</span>
+                                   <!--  <img src="{{ asset('/images/upload_image/'.$blog -> image) }}" alt="Awesome Image"/> -->
+                                    <span class="author-name">{{ strtoupper(strtolower($blog->name)) }}</span>
                                 </div><!-- /.author-box -->
-                                <!-- <div class="link-box"><a href="blog-single.html">Read More</a> <span class="icon icon-aroow-right"></span></div> -->
-                            </div><!-- /.more-box -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block -->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                       <img src="{{ asset('frontend/assets/images/resource/products/news-14.jpg') }}" alt="">
-                        <div class="lower-content clearfix">
-                            <div class="info">
-                                <ul>
-                                    <li><a href="#">Machine</a>, </li>
-                                    <li><a href="#">June 06, 2019</a></li>
-                                </ul>  
+                                <div class="link-box"><a href="{{ url('blog-single')}}">Read More</a> <span class="icon icon-aroow-right"></span></div>
                             </div>
-                            <h3>Fully Automatic Hydraclic Paper Plate Machine</h3>
-                            
-                            <div class="text">Rationally encounter consequences seds ut that are extremely painful and when to do what we like beat circumtances and owing...</div>
-                            <div class="more-box clearfix">
-                                <div class="author-box">
-                                    <img src="{{ asset('frontend/assets/images/testimonials/2.png') }}" alt="Awesome Image"/>
-                                    <span class="author-name">Erich Larsen</span>
-                                </div><!-- /.author-box -->
-                            </div><!-- /.more-box -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block -->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                       <img src="{{ asset('frontend/assets/images/resource/products/news-17.jpg') }}" alt="">
-                        <div class="lower-content clearfix">
-                            <div class="info">
-                                <ul>
-                                    <li><a href="#">Machine</a>, </li>
-                                    <li><a href="#">June 06, 2019</a></li>
-                                </ul>  
-                            </div>
-                            <h3>Semi Automatic Paper Plate Making Machine</h3>
-                            
-                            <div class="text">Rationally encounter consequences seds ut that are extremely painful and when to do what we like beat circumtances and owing...</div>
-                            <div class="more-box clearfix">
-                                <div class="author-box">
-                                    <img src="{{ asset('frontend/assets/images/testimonials/3.png') }}" alt="Awesome Image"/>
-                                    <span class="author-name">Fermin Seiler</span>
-                                </div><!-- /.author-box -->
-                            </div><!-- /.more-box -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block -->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                        <img src="{{ asset('frontend/assets/images/resource/products/news-15.jpg') }}" alt="">
-                        <div class="lower-content clearfix">
-                            <div class="info">
-                                <ul>
-                                    <li><a href="#">Mechine</a>, </li>
-                                    <li><a href="#">June 06, 2019</a></li>
-                                </ul>  
-                            </div>
-                            <h3>Hydraulic Single Station Scrubber Packing Machine</h3>
-                            
-                            <div class="text">Rationally encounter consequences seds ut that are extremely painful and when to do what we like beat circumtances and owing...</div>
-                            <div class="more-box clearfix">
-                                <div class="author-box">
-                                    <img src="{{ asset('frontend/assets/images/testimonials/1.png') }}" alt="Awesome Image"/>
-                                    <span class="author-name">Dean Snith</span>
-                                </div><!-- /.author-box -->
-                            </div><!-- /.more-box -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Block -->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                        <img src="{{ asset('frontend/assets/images/resource/products/news-19.jpg') }}" alt="">
-                        <div class="lower-content clearfix">
-                            <div class="info">
-                                <ul>
-                                    <li><a href="#">Mechine</a>, </li>
-                                    <li><a href="#">June 06, 2019</a></li>
-                                </ul>  
-                            </div>
-                            <h3>Slipper Polishing Machine</h3>
-                            
-                            <div class="text">Rationally encounter consequences seds ut that are extremely painful and when to do what we like beat circumtances and owing...</div>
-                            <div class="more-box clearfix">
-                                <div class="author-box">
-                                    <img src="{{ asset('frontend/assets/images/testimonials/2.png') }}" alt="Awesome Image"/>
-                                    <span class="author-name">Terina Perz</span>
-                                </div><!-- /.author-box -->
-                            </div><!-- /.more-box -->
+                            <!-- /.more-box -->
                         </div>
                     </div>
                 </div>
             </div>
-
+@endforeach
             <!-- Styled Pagination -->
             <div class="styled-pagination text-center">
                 <ul class="clearfix">
