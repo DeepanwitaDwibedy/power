@@ -112,35 +112,37 @@
     <!-- News Section -->
     <section class="news-section">
         <div class="auto-container">
-            @foreach($blog as $blog)
+            
             <div class="row clearfix">
-                <!-- News Block -->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                    <div class="inner-box">
-                            <img src="{{ asset('/images/upload_image/'.$blog -> image) }}" alt="">
-                        <div class="lower-content clearfix">
-                            <div class="info">
-                                <ul>
-                                    <li><a href="#">{{ strtoupper(strtolower($blog ->tag))  }}</a>, </li>
-                                    <!-- <li><a href="#">June 06, 2019</a></li> -->
-                                </ul>  
+                @foreach($blog as $blog)
+                    <!-- News Block -->
+                    <div class="news-block col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                                <img src="{{ asset('/images/upload_image/'.$blog -> image) }}" width="400px" height="300px" alt="">
+                            <div class="lower-content clearfix">
+                                <div class="info">
+                                    <ul>
+                                        <li><a href="#">{{ strtoupper(strtolower($blog ->tag))  }}</a>, </li>
+                                        <!-- <li><a href="#">June 06, 2019</a></li> -->
+                                    </ul>  
+                                </div>
+                                <h3>{{ strtoupper(strtolower($blog->title)) }}</h3>
+                                
+                                <div class="text">{{ strtoupper(strtolower($blog->short_description)) }}</div>
+                                <div class="more-box clearfix">
+                                    <div class="author-box">
+                                       <!--  <img src="{{ asset('/images/upload_image/'.$blog -> image) }}" alt="Awesome Image"/> -->
+                                        <span class="author-name">{{ strtoupper(strtolower($blog->name)) }}</span>
+                                    </div><!-- /.author-box -->
+                                    <div class="link-box"><a href="{{ url('blog-single')}}">Read More</a> <span class="icon icon-aroow-right"></span></div>
+                                </div>
+                                <!-- /.more-box -->
                             </div>
-                            <h3>{{ strtoupper(strtolower($blog->title)) }}</h3>
-                            
-                            <div class="text">{{ strtoupper(strtolower($blog->short_description)) }}</div>
-                            <div class="more-box clearfix">
-                                <div class="author-box">
-                                   <!--  <img src="{{ asset('/images/upload_image/'.$blog -> image) }}" alt="Awesome Image"/> -->
-                                    <span class="author-name">{{ strtoupper(strtolower($blog->name)) }}</span>
-                                </div><!-- /.author-box -->
-                                <div class="link-box"><a href="{{ url('blog-single')}}">Read More</a> <span class="icon icon-aroow-right"></span></div>
-                            </div>
-                            <!-- /.more-box -->
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
-@endforeach
+            
             <!-- Styled Pagination -->
             <div class="styled-pagination text-center">
                 <ul class="clearfix">
